@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono');
+
+body {
+  /* font-family: 'Space Mono', monospace; */
+  font-family:serif;
+  font-size: 120px;
+  line-height: 1.4em;
+  word-spacing: 120px;
+  background-color: white;
+  word-break: break-word;
+}
+
+#cursor {
+  /* animation: blinker 1s step-end infinite;  */
+  //you can change 'step-end' to 'linear' for smooth transition
+}
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
+
+#container {
+  /* width: 90vw; */
+  margin: 45px;
+  text-align:left;
+  word-spacing: 110px;
+  line-height: 190px;
+}
+.inner {
+  /*display:block;*/
+}
+
+.letter{
+  mix-blend-mode: darken;
+  margin-left: -3px;
+  width: 20vw;
+
+}
+
+.letter:hover{
+  /* transition-delay:.3s; */
+  /* transform: scale(5); */
+  cursor: pointer;
+}
+
+img{
+  /* mix-blend-mode: multiply; */
+  filter : contrast(120%);
+}
+
+
+.caption{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.individual{
+  /* mix-blend-mode: darken; */
+  margin-left: 12px;
+  margin-bottom: 5px;
+  width: 20vw;
+}
+
+.back{
+  border: 1px;
+  border-radius: 0px;
+  outline: none;
+  background-color: #e7e7e7; color: black;
+  /* background-color: black; */
+  position: fixed;
+  top:15px;
+  left:15px;
+  font-size: 10pt;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 10;
+  padding:5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: pink;
+}
+
+a:link {
+  text-decoration: none;
+  color:black;
+}
+
+a:visited {
+  text-decoration: none;
+  color:black;
+}
+
+button{
+  background-color: white;
+}
+
+@media screen and (max-width: 600px) {
+  /* For mobile phones: */
+  #container{
+    /* background-color:red; */
+    word-spacing: normal;
+    line-height: 130px;
+    margin:40px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .letter{
+    width: 25vw;
+    margin-left: 3px;
+  }
+  .individual{
+    width: 25vw;
+    margin-left: 5vw;
+
+  }
+ 
+}

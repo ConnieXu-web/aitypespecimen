@@ -1,0 +1,59 @@
+<!doctype html>
+<head>
+  <title>j</title>
+  <script src="js/jquery-3.2.0.min.js"></script>
+  <script src="js/init2.js"></script>
+  <script>
+    console.log("hello!")
+    var string = `<button onclick="appendLtr()"><img class="individual" src="assets/letters/j/j-iteration_50/j-50-${randomImg}.jpeg"></button>`;
+
+   function firstimg(){
+      var randomImg = Math.floor(1 + Math.random() * 64);
+      var randomIteration = Math.floor(1 + Math.random() * 50)
+      var string = `<button onclick="getRandnum()"><img class="individual" src="assets/letters/j/j-iteration_${randomIteration}/j-${randomIteration}-${randomImg}.jpeg"><p class="caption">Iteration ${randomIteration}, Image #${randomImg}</p></button>`;
+      document.getElementById("container").insertAdjacentHTML("afterbegin", string)
+    }
+
+    function getRandnum(){
+      var randomNum = Math.floor(1 + Math.random() * 64);
+      var randomIteration = Math.floor(1 + Math.random() * 50);
+      console.log("random number:",randomNum);
+      appendLtr(randomNum,randomIteration);
+    }
+    function appendLtr(randomNum,randomIteration) {
+      imagestring = `<button onclick="getRandnum()"><img class="individual" src="assets/letters/j/j-iteration_${randomIteration}/j-${randomIteration}-${randomNum}.jpeg"><p class="caption">Iteration ${randomIteration}, Image #${randomNum}</p></button>`;
+      document.getElementById("container").insertAdjacentHTML("afterbegin", imagestring)
+    }
+
+    setInterval(function(){
+      getRandnum();
+    },3000);
+  </script>
+
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    button{
+      border: none;
+      outline: none;
+      mix-blend-mode: darken;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body onload="firstimg()">
+ 
+<div id="container">
+</div>
+
+<div>
+  <button class="back">
+    <a href="index.html">
+    Back
+    </a>
+  </button>
+</div>
+
+ 
+</bodyonload="myFunction()">
+</html>
